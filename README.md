@@ -1,0 +1,2 @@
+# CloudComputingNJIT
+Creating Instances in AWS. By java calling Images from S3 bucket and  then passing those images to Image recognition.  If Images have car in them sending those images Index to AWS SQS queue with one instance. With 2nd Instance calling images from S3 bucket and comparing those images with index in SQS so we will get only images which have car in them. Then on those images have car send them to Text Recognition and print respective text in file again each   
