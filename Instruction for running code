@@ -1,0 +1,41 @@
+There are 2 ways how you can execute this code
+Please copy the code in your file name as <class name>.java
+Then go to your aws education account/ normal account 
+Click on Account Details and AWS Account.
+Click on show and copy your credential and past it into .aws folder or file where you are running your code in eclips
+or copy credential file from .aws account to your local file directory where you have 2 if you .java files
+Note: After every 3 hours credentials will Expire so you have to copy and past it over there.
+###################################
+
+###########Now you have to create a SQS fifo ##############
+For that go your AWS consol and search for SQS and click on simple Queue Service 
+Then on top Left corner click on creat queue and then select fifo and name queue <queue_name>.fifo
+
+it will take few second and then copy url of queue that you will need later on
+
+Now you have to export all the libries for AWS required for classes i have uploaded all of them
+Select only those you need for program 
+########################################################################################################################
+
+Now you have to check that you have aws eclips toolkit or not if you don't have first part will not work do this step first
+So please go to link https://marketplace.eclipse.org/content/aws-toolkit-eclipse.
+Click and hold on install button and drag to your local eclips. It will install aws toolkit for you.
+then if everything goes well you can run Images detection first and then text detection
+###############################################################################################################
+##################################Instruction for running on Ec2 Insrances#####################################
+create 2 ec2 instances name them diffrent download their keys.
+Install JDK to both ec2 instances
+Then upload credential file on both ec2 instances 
+With ec2 create runnable jar file and upload jar file.
+###############################################################################################################################
+#############################command for uploading files#############################
+for bellow command you have to be in same directory fromyour terminal or powershell
+scp -v -i .\<Name of key>.pem .\<Name of file>.jar ec2-user@<address of your ec2>:/home/ec2-user/
+which you can find on ec2 instance connect button for individual
+example: scp -v -i .\<Name of key>.pem .\<Name of Jar file>.jar ec2-user@ec2-54-172-205-90.compute-1.amazonaws.com:/home/ec2-user/
+###### After Uploading all the files and installing JDK#########
+you can run with command java -jar <filename.jar>
+
+If you have other error you can contact me and figure out your self
+
+Happy coding in AWS
